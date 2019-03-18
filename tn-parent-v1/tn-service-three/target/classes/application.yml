@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-three #服务名称
+server:
+  port: 8083 #启动端口号
+ 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://master:8091/eureka/,http://slave1:8092/eureka/,http://slave2:8093/eureka/ #向服务中心注册地址,如果是集群填写一个地址整个集群也能识别,但是如果单个服务器挂掉,则这个服务提供者也挂掉,建议全部填写集群地址

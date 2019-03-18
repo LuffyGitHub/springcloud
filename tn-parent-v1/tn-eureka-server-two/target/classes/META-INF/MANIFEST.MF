@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: tn-eureka-server-two
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: DELL
+Implementation-Vendor-Id: com.timenodes
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/tn-parent-v1/tn-eureka-server-two
+Created-By: Maven Integration for Eclipse
+

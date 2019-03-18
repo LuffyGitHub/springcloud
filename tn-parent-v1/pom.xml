@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.timenodes</groupId>
+  <artifactId>tn-parent-v1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+        <relativePath/>
+        <!-- lookup parent from repository -->
+    </parent>
+  
+    <properties>
+    	<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    	<!-- spring boot默认的jdk 版本为1.6，我们在这里改为1.8 -->
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+   		<lcn.last.version>4.1.0</lcn.last.version>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+  
+     <modules>
+     	<module>tn-eureka-server-one</module>
+     	<module>tn-common</module>
+     	<module>tn-service-one</module>
+     	<module>tn-service-two</module>
+     	<module>tn-service-three</module>
+     	<module>tn-eureka-server-two</module>
+     	<module>tn-eureka-server-three</module>
+     	<module>tn-client-one</module>
+     	<module>tn-client-two</module>
+     	<module>tn-client-three</module>
+     </modules>
+</project>
